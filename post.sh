@@ -8,6 +8,8 @@ git config --global user.email "i1007673219@gmail.com"
 git config --global user.name "TsungYu HSIEH"
 git config --global push.default simple
 
+cp .vimrc .tmux.conf $HOME
+
 mkdir $HOME/.vim/bundle -p
 git clone git@github.com:VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
