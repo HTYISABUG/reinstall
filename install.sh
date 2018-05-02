@@ -10,7 +10,7 @@ cd -
 
 # apt
 apt update -y
-apt install vim-gnome git ssh xclip -y
+apt install vim-gnome-py2 git ssh xclip -y
 apt install ibus-chewing ibus-anthy -y
 apt install smplayer transmission htop cscope -y
 apt install gcc g++ cmake python-dev python3-dev python-pip python3-pip -y
