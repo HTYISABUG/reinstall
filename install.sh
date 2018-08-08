@@ -15,7 +15,7 @@ apt install ibus-chewing ibus-anthy -y
 apt install smplayer transmission htop cscope -y
 apt install gcc g++ cmake python-dev python3-dev python-pip python3-pip -y
 apt install zsh powerline autojump tmux -y
-apt install lm-sensors
+apt install lm-sensors colordiff -y
 apt upgrade -y
 apt autoremove -y
 

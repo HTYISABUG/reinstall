@@ -7,6 +7,7 @@ set cursorcolumn
 set cursorline
 set enc=utf8
 set expandtab
+set fileencodings=ucs-bom,utf-8,cp936
 set foldenable
 set foldlevel=99
 set foldmethod=syntax
@@ -34,12 +35,13 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'SirVer/ultisnips'
 Plugin 'tell-k/vim-autopep8'
-Plugin 'honza/vim-snippets'
+Plugin 'HTYISABUG/vim-snippets'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
@@ -56,6 +58,8 @@ map <F3> <leader>ci
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<c-x>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+let g:ultisnips_python_style = "google"
+let g:ultisnips_python_quoting_style = 'single'
 
 " autopep8
 let g:autopep8_disable_show_diff = 1
@@ -89,7 +93,7 @@ if filereadable("cscope.out")
 endif
 
 " python with virtualenv support
-py3 << EOF
+py << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
@@ -100,3 +104,11 @@ EOF
 
 " run .py
 au BufRead *.py map <buffer> <F5> :w<CR>:!/usr/bin/env clear && python3 % <CR>
+
+" highlight python self
+augroup python
+    au!
+    au FileType python
+                \ syn keyword myPythonKeyword self |
+                \ hi link myPythonKeyword Keyword
+augroup end

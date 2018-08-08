@@ -23,3 +23,8 @@ echo '' >> $HOME/.zshrc
 echo 'alias py="python"' >> $HOME/.zshrc
 echo 'alias py3="python3"' >> $HOME/.zshrc
 echo 'alias sensors="watch -n 1 sensors"' >> $HOME/.zshrc
+echo 'alias nvidia-smi="watch -n 1 nvidia-smi"' >> $HOME/.zshrc
+echo 'alias gdb="gdb -q"' >> $HOME/.zshrc
+echo 'alias diff="colordiff -u"' >> $HOME/.zshrc
+
+echo 'export CLASSPATH="$CLASSPATH:."' >> $HOME/.zshrc
