@@ -1,11 +1,7 @@
 #!/bin/bash
 
-ssh-keygen -t rsa -b 4096 -C "i1007673219@gmail.com"
-ssh-add ~/.ssh/id_rsa
-xclip -sel clip < ~/.ssh/id_rsa.pub
-
 git config --global user.email "i1007673219@gmail.com"
-git config --global user.name "TsungYu HSIEH"
+git config --global user.name "Tsung-Yu HSIEH"
 git config --global push.default simple
 
 cp .vimrc .tmux.conf $HOME
@@ -14,7 +10,7 @@ mkdir $HOME/.vim/bundle -p
 git clone git@github.com:VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd $HOME/.vim/bundle/YouCompleteMe/
-./install.py --clang-completer
+./install.py --clang-completer --go-completer
 cd -
 
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
