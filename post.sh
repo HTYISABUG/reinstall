@@ -3,6 +3,7 @@
 git config --global user.email "i1007673219@gmail.com"
 git config --global user.name "Tsung-Yu HSIEH"
 git config --global push.default simple
+git config --global core.editor vim
 
 cp .vimrc .tmux.conf $HOME
 
@@ -22,5 +23,6 @@ echo 'alias sensors="watch -n 1 sensors"' >> $HOME/.zshrc
 echo 'alias nvidia-smi="watch -n 1 nvidia-smi"' >> $HOME/.zshrc
 echo 'alias gdb="gdb -q"' >> $HOME/.zshrc
 echo 'alias diff="colordiff -u"' >> $HOME/.zshrc
-
+echo '' >> $HOME/.zshrc
 echo 'export CLASSPATH="$CLASSPATH:."' >> $HOME/.zshrc
+echo 'export PATH="$PATH:/usr/local/go/bin"' >> $HOME/.zshrc
