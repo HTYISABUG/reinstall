@@ -25,4 +25,3 @@ echo 'alias gdb="gdb -q"' >> $HOME/.zshrc
 echo 'alias diff="colordiff -u"' >> $HOME/.zshrc
 echo '' >> $HOME/.zshrc
 echo 'export CLASSPATH="$CLASSPATH:."' >> $HOME/.zshrc
-echo 'export PATH="$PATH:/usr/local/go/bin"' >> $HOME/.zshrc
