@@ -9,7 +9,6 @@ set enc=utf8
 set expandtab
 set fileencodings=ucs-bom,utf-8,cp936
 set foldenable
-set foldlevel=99
 set foldmethod=syntax
 set hls
 set nocompatible
@@ -25,10 +24,10 @@ map <F4> : set nu!<BAR>set nonu?<CR>
 
 " fold
 nnoremap <space> za
-map <c-PageUp> zM
-map <c-PageDown> zR
-map <c-Up> zk
-map <c-Down> zj
+nnoremap <c-PageUp> zm
+nnoremap <c-PageDown> zr
+nnoremap <c-Up> zk
+nnoremap <c-Down> zj
 
 " plugin
 filetype off
