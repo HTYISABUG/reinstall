@@ -13,7 +13,7 @@ cd -
 
 # apt
 apt update -y
-apt install git ssh xclip \
+apt install git ssh xclip vim \
             ibus-chewing ibus-mozc \
             smplayer transmission htop \
             gcc g++ cmake python-dev python3-dev python3-pip \
@@ -35,18 +35,4 @@ cd -
 cd $HOME/Downloads
 tar -C /usr/local -xzf go1.11.linux-amd64.tar.gz
 rm go1.11.linux-amd64.tar.gz
-cd -
-
-# vim
-cd $HOME/Downloads
-git clone $VIM_URL
-./configure --with-features=huge \
-            --enable-cscope \
-            --enable-gui=gtk2 \
-            --enable-multibyte \
-            --enable-python3interp=yes \
-            --enable-pythoninterp=yes \
-            --with-x
-make -j12
-make install
 cd -

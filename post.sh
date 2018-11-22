@@ -8,7 +8,7 @@ git config --global core.editor vim
 cp .vimrc .tmux.conf $HOME
 
 mkdir $HOME/.vim/bundle -p
-git clone git@github.com:VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd $HOME/.vim/bundle/YouCompleteMe/
 ./install.py --clang-completer --go-completer
