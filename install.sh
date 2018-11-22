@@ -15,14 +15,13 @@ cd -
 apt update -y
 apt install git ssh xclip \
             ibus-chewing ibus-mozc \
-            smplayer transmission htop cscope \
-            gcc g++ cmake python-dev python3-dev python-pip python3-pip \
+            smplayer transmission htop \
+            gcc g++ cmake python-dev python3-dev python3-pip \
             zsh powerline autojump tmux \
             lm-sensors colordiff \
             libncurses5-dev libgnome2-dev libgnomeui-dev \
             libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
-            libcairo2-dev libx11-dev libxpm-dev libxt-dev \
-            ruby-dev lua5.1 liblua5.1-dev libperl-dev -y
+            libcairo2-dev libx11-dev libxpm-dev libxt-dev -y
 apt upgrade -y
 apt autoremove -y
 
@@ -44,12 +43,10 @@ git clone $VIM_URL
 ./configure --with-features=huge \
             --enable-cscope \
             --enable-gui=gtk2 \
-            --enable-luainterp=yes \
             --enable-multibyte \
-            --enable-perlinterp=yes \
             --enable-python3interp=yes \
             --enable-pythoninterp=yes \
-            --enable-rubyinterp=yes
+            --with-x
 make -j12
 make install
 cd -
