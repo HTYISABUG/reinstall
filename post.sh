@@ -23,3 +23,4 @@ echo 'alias sensors="watch -n 1 sensors"' >> $HOME/.zshrc
 echo 'alias nvidia-smi="watch -n 1 nvidia-smi"' >> $HOME/.zshrc
 echo 'alias gdb="gdb -q"' >> $HOME/.zshrc
 echo 'alias diff="colordiff -u"' >> $HOME/.zshrc
+echo 'alias gop="export GOPATH=`pwd`"' >> $HOME/.zshrc

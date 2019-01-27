@@ -5,6 +5,7 @@ set backspace=2
 set clipboard=unnamedplus
 set cursorcolumn
 set cursorline
+set conceallevel=0
 set enc=utf8
 set expandtab
 set fileencodings=ucs-bom,utf-8,cp936
@@ -20,12 +21,12 @@ set tabstop=4
 highlight Folded ctermfg=0
 syntax on
 filetype indent on
-map <F4> : set nu!<BAR>set nonu?<CR>
+map <F4> :set nu!<BAR>set nonu?<CR>
 
 " fold
 nnoremap <space> za
-nnoremap <c-PageUp> zm
-nnoremap <c-PageDown> zr
+nnoremap <c-PageUp> zM
+nnoremap <c-PageDown> zR
 nnoremap <c-Up> zk
 nnoremap <c-Down> zj
 
@@ -43,8 +44,11 @@ Plugin 'tell-k/vim-autopep8'
 Plugin 'HTYISABUG/vim-snippets'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin on
+
+" vim-go
 
 " indentLine
 let g:indentLine_char = '¦'
@@ -111,3 +115,13 @@ augroup python
                 \ syn keyword myPythonKeyword self |
                 \ hi link myPythonKeyword Keyword
 augroup end
+
+" vim-go
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
