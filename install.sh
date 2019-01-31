@@ -7,10 +7,11 @@ VIM_URL=https://github.com/vim/vim.git
 
 # download
 wget $CHROME_URL -P $DOWNLOADS
+git clone $VIM_URL $DOWNLOADS/vim
 
 # apt
 apt update -y
-apt install git ssh xclip vim \
+apt install ssh xclip vim \
             ibus-chewing ibus-mozc \
             smplayer transmission htop \
             gcc g++ cmake python-dev python3-dev python3-pip golang \
@@ -24,4 +25,4 @@ apt autoremove -y
 
 # dpkg
 dpkg -i $DOWNLOADS/google-chrome-stable_current_amd64.deb
-rm $DOWNLOADS/Downloads/google-chrome-stable_current_amd64.deb
+rm $DOWNLOADS/google-chrome-stable_current_amd64.deb

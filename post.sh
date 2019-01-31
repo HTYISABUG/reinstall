@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git config --global user.email "i1007673219@gmail.com"
-git config --global user.name "Tsung-Yu HSIEH"
+git config --global user.name "TSUNGYU HSIEH"
 git config --global push.default simple
 git config --global core.editor vim
 
